@@ -13,13 +13,14 @@ app.get('/:state/:district', (req, res) => {
   let state = req.params.state
   let district = req.params.district
 
-  govTrack.getRepresentative(state, district, function(cb) {
-    // console.log(cb)
-    res.render('reppage.ejs', cb.objects[0])
+  govTrack.getRepresentative(state, district)
+    .then(function(result){
+      res.render('reppage.ejs', result.objects[0])
+    },
+    function(err) {
+      console.log(err)
+    })
   })
-
-
-}) // state/district get
 
 app.listen(3000, function () {
   console.log('app listening on port 3000!')
