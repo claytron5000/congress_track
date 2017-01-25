@@ -18,14 +18,6 @@ app.get('/:state/:district', (req, res) => {
     res.render('reppage.ejs', cb.objects[0])
   })
 
-  // govTrack.findRole({ current: true, state: state, district: district }, function(err, govres) {
-  //   if (!err) {
-  //
-  //     res.render('reppage.ejs', govres.objects[0])
-  //   } else {
-  //     console.log('error')
-  //   }
-  // })
 
 }) // state/district get
 
