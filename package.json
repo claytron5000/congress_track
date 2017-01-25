@@ -1,0 +1,22 @@
+{
+  "name": "govtrack",
+  "version": "1.0.0",
+  "description": "Tool for getting voting data from representatives",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "author": "Clayton Salem",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "ejs": "^2.5.5",
+    "express": "^4.14.0",
+    "govtrack-node": "^0.2.0"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.22.0",
+    "nodemon": "^1.11.0"
+  }
+}

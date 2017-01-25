@@ -1,0 +1,7 @@
+<h2><%= person.name %></h2>
+<h3><%= description %></h3>
+<ul>
+  <% for (let prop in person) { %>
+    <li><%= prop + ': ' + person[prop] %></li>
+  <% } %>
+</ul>
