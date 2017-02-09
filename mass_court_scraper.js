@@ -34,8 +34,10 @@ app.post('/search', (req, res) => {
           let rep = { name: '', role: '', headshot: '', id: ''}
           name = $(el).find('.name').text()
           role = $(el).find('.role').text()
-          headshot = $(el).find('.headshotWrapper img').attr('src')
-          id = $(el).find('.name').parent().attr('href').replace('/Legislators/Profile/', '')
+          headshot = 'https://malegislature.gov' +
+                      $(el).find('.headshotWrapper img').attr('src')
+          id = $(el).find('.name').parent().attr('href')
+                .replace('/Legislators/Profile/', '')
           json.push({
             name: name,
             role: role,

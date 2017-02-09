@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon mass_court_scraper.js"
+    "mass_gen_court": "nodemon mass_court_scraper.js",
+    "us_congress": "nodemon server.js --exec babel-node"
   },
   "author": "Clayton Salem",
   "license": "ISC",

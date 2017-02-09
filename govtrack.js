@@ -4,7 +4,7 @@ const govTrack = require('govtrack-node');
 // get the representative for the district
 export function getRepresentative(state, district) {
   return new Promise(function(resolve, reject) {
-    govTrack.findRole({ current: trhue, state: state, district: district }, function(err, res) {
+    govTrack.findRole({ current: true, state: state, district: district }, function(err, res) {
       if (!err) {
         resolve(res)
       } else {
